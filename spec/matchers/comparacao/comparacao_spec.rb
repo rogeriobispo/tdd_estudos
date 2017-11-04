@@ -23,6 +23,29 @@ describe 'Matchers de Comparaçao' do
     expect(7).to be_between(2,7).inclusive
   end
 
+  it 'be_between inclusive / Falhas agregadas', :aggregate_failures do
+      expect(5).to be_between(2,7).inclusive
+      expect(1).to be_between(2,7).inclusive
+      expect(8).to be_between(2,7).inclusive
+  end
+
+  it 'be_between inclusive / Falhas agregadas', aggragate_failures: true do
+      expect(5).to be_between(2,7).inclusive
+      expect(1).to be_between(2,7).inclusive
+      expect(8).to be_between(2,7).inclusive
+  end
+  # pode ser configurado em spec helper falhas agregadas todos seus teste
+  # Serao agregados.
+  # config.define_derived_metadata do |meta|
+  #   meta[:aggregate_failures] = true
+  # end
+  it 'be_between inclusive / Falhas agregadas' do
+      aggregate_failures do
+        expect(5).to be_between(2,7).inclusive
+        expect(1).to be_between(2,7).inclusive
+        expect(8).to be_between(2,7).inclusive
+      end
+  end
 
   it 'be_between exclusivo' do
     expect(5).to be_between(2,7).exclusive
