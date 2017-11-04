@@ -1,5 +1,5 @@
 require 'calculator'
-describe Calculator do
+RSpec.describe Calculator, "Sobre a Calculadora" do
   context '#div' do
     it 'divided by zero' do
       expect{subject.div(3,0)}.to raise_error(ZeroDivisionError)
