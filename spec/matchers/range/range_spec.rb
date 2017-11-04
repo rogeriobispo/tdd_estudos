@@ -8,4 +8,5 @@ describe (1..10), 'Range' do
   it { is_expected.to cover(2) }
   it { is_expected.to cover(2,5) }
   it { is_expected.not_to cover(0,11) }
+  it { expect(subject).not_to cover(0,11) }
 end
