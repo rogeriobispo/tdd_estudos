@@ -1,1 +1,4 @@
 --require spec_helper
+--format documentation # same as -fd
+# --tag type:collection executa este test agrupado
+# --tag ~slow nao executa o grupo slow nega o grupo.

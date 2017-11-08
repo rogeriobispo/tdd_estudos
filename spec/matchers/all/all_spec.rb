@@ -1,4 +1,7 @@
-describe 'all' do
+describe 'all', collection: true do
+# pode-se utilizar tambem
+# :collection como simbolo
+# ou type:'colection' todas estas formas irao agrupar testes
   around(:each) do |teste|
     puts "Antes"
     teste.run
